@@ -17,7 +17,7 @@ Linux basics
     DISK TYPE: VHD
     DISK SIZE: 10GB
 
-4. Установить Debian на виртуальный сервер
+Задача 4. Установить Debian на виртуальный сервер
    ISO: https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.8.0-amd64-netinst.iso
    Разделы диска:
        /boot
