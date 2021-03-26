@@ -20,7 +20,8 @@ Linux basics
 Задача 4. Установить Debian на виртуальный сервер
 * ISO: https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.8.0-amd64-netinst.iso
 * Разделы диска: 
-``` /boot 
+``` 
+  /boot 
   / 
   SWAP
 ```
