@@ -1,7 +1,10 @@
 # Linux-basics
 Linux basics
 
+---
+
 # Рабочее окружение
+
 ## Windows
 Задача 1: Установить последнюю версию PuTTY 
 
@@ -31,9 +34,13 @@ Linux basics
   SWAP
 ```
 
+---
+
 ## Linux
 
 TBD
+
+---
 
 # Общие навыки 
 
@@ -52,7 +59,9 @@ TBD
 * Подключится к серверу под пользователем root по доменному имени(по паролю)
 * Подключится к серверу под пользователем root по доменному имени(по ключу)
 
-## Пакетный менеджер APT
+---
+
+### Пакетный менеджер APT
 Литература:
 * https://losst.ru/kak-polzovatsya-apt
 * https://pingvinus.ru/note/apt
@@ -91,14 +100,7 @@ TBD
 Задача 2.1. Изучить системную справку следующих утилит
 * pwd
 
-### CAT
-
-### CP
-
-### MV
-
-### RM
-
+---
 
 ## Стандартные утилиты
 
@@ -239,6 +241,7 @@ cat /etc/shells >> /srv/merge
 * /etc/services
 
 ### CP
+Литература:
 ``` man cp ```
 
 Задача 1. Копируем файл 
@@ -258,6 +261,7 @@ cp /etc/shells /srv/shells_copy
 * /etc/shadow
 
 ### Touch
+Литература:
 ``` man touch ```
 
 Задача 1. Создаем пустой файл
@@ -277,6 +281,7 @@ touch /srv/{f1,f2,f3}
 
 
 ### MV
+Литература:
 ``` man mv ```
 
 Задача 1. Переименовываем файл 
@@ -301,6 +306,7 @@ mv /srv/f2 /tmp
 
 
 ### RM
+Литература:
 ``` man rm ```
 
 Задача 1. Удаляем файл
@@ -326,6 +332,227 @@ rm -R dir1
 Задача 2.1. Создать каталог new_dir c двумя пустыми файлами и и удалить его 
 
 Задача 2.2. Создать пустой файл new_file и удалить его
+
+### ECHO
+Литература:
+``` man echo ```
+
+Задача 1. Выводим строку на экран
+``` 
+echo "Hello World!"
+echo 'Hello World!'
+echo Hello
+echo
+echo  World
+echo !
+``` 
+
+Задача 2. выводим значние переменных
+``` 
+echo $PWD
+echo $SHELL
+echo $USER
+echo %HOME
+echo $PATH
+VAR="Hello!"
+echo $VAR
+``` 
+Задача 3. Создание файла
+``` 
+echo $PWD > test_file123
+echo $SHELL > test_file123
+echo $USER > test_file123
+echo %HOME > test_file123
+echo $PATH > test_file123
+VAR="Hello!" 
+echo $VAR > test_file123
+``` 
+Задача 4. Самостоятельная работа
+
+Задача 2.1. Создать файл /tmp/HW содержищий строку "dfksfjkvzbvmsjkthryhl"
+
+---
+
+## Продвинутые утилиты
+
+### FIND
+Литература:
+``` find echo ```
+
+Примеры использования 
+
+Поиск файлов
+```bash
+# Все файлы в текущем каталоге
+find . -type f 
+# Файлы в каталоге /etc/ssh
+find /etc/ssh -type f
+find /etc/ssh -type f -ls
+find /etc/ssh -type f -print
+# Файлы в каталоге /var/log по шаблону *.log
+find /var/log -type f -name "*.log"
+```
+
+Поиск каталогов
+```bash
+# Все каталоги в текущем каталоге
+find . -type d
+# Все каталоги в каталоге /etc
+find /etc -type d
+find /etc -type d -ls
+find /etc -type d -print
+# Все каталоги в каталоге /etc по шаблону *ssh*
+find /etc -type d -name "*ssh*"
+```
+
+Самостоятельная работа
+Задача 1. Все каталоги в /etc без подкаталогов(глубина 1)
+Задача 2. Все файлы в /etc только из подкаталогов(глубина 2)
+
+### LN / UNLINK
+Литература:
+* https://losst.ru/simvolicheskie-i-zhestkie-ssylki-linux
+``` find ln ```
+``` find unlink ```
+
+Примеры использования
+
+Создание символьной ссылки файлов
+```bash
+# Создаем ссылку на файл в текущем каталоге
+mkdir test
+touch test/sfile
+ln -s ./test/sfile .
+
+# Проверяем
+ls -l
+file sfile
+
+# Записываем строку в исходный файл
+cat sfile
+echo "Hello" > test/sfile
+cat sfile
+
+# Создаем ссылку на файл в каталоге /tmp
+touch sfile1
+ln -s $(pwd)/sfile1 /tmp
+
+# Проверяем
+ls -l /tmp
+file /tmp/sfile1
+
+# Записываем строку в исходный файл
+cat /tmp/sfile1
+echo "Hello" > sfile1
+cat /tmp/sfile1
+
+unlink sfile
+unlink /tmp/sfile1
+```
+
+Создание жесткой ссылки файлов
+```bash
+# Создаем ссылку на файл в текущем каталоге
+mkdir test
+touch test/sfile2
+ln ./test/sfile2 .
+
+# Проверяем
+ls -l
+file sfile2
+
+# Записываем строку в исходный файл
+cat sfile2
+echo "Hello" > test/sfile2
+cat sfile2
+
+# Создаем ссылку на файл в каталоге /tmp
+touch sfile3
+ln $(pwd)/sfile3 /tmp
+
+# Проверяем
+ls -l /tmp
+file /tmp/sfile3
+
+# Записываем строку в исходный файл
+cat /tmp/sfile3
+echo "Hello" > sfile3
+cat /tmp/sfile3
+
+unlink sfile2
+unlink /tmp/sfile3
+```
+
+Самостоятельная работа
+Задача 1. Создать символьную ссылку на следующие файлы в текущем каталоге
+* /etc/passwd
+* /etc/hosts
+
+Задача 2. Создать символьную ссылку на следующие каталоги в текущем каталоге
+* /etc/ssh 
+* /var/log
+
+Задача 3. Выяснить разницу между символьной и жесткой ссылкой
+
+### CHOWN
+
+### CHMOD
+
+### TAR
+
+### MORE / LESS
+
+### HEAD / TAIL
+
+### GREP
+
+### SORT
+
+### WC
+
+### DIFF
+
+### MOUNT / UMOUNT
+
+## "Диагностические" утилиты
+
+### DATE
+
+### TIME
+
+### DU
+
+### DF
+
+### UPTIME
+
+### UNAME
+
+### FREE
+
+### TOP
+
+### PS
+
+### IP
+
+### PING
+
+### TRACEROUTE
+
+### SS
+
+## Другие
+
+## SU / SUDO
+
+### KILL
+
+### SLEEP
+
+### TIMEOUT
+
+## Управления пользователем
 
 
 # Первоначальная настройка
