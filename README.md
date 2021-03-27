@@ -86,6 +86,14 @@ TBD
 Задача 2.1. Изучить системную справку следующих утилит
 * pwd
 
+### CAT
+
+### CP
+
+### MV
+
+### RM
+
 
 ## Стандартные утилиты
 
@@ -146,7 +154,6 @@ TBD
 ``` man mkdir ```
 
 Задача 1. Создаем временные каталог
-
 ``` mkdir /tmp/test1 ```
 
 ``` mkdir /tmp/test2 /tmp/test3 ```
@@ -179,7 +186,141 @@ TBD
 
 Задача 2. Самостоятельная работа
 
-Задача 2.1. Удалить каталог каталог /srv/site3 
+Задача 2.1. Удалить каталог каталог /srv/site3
+
+### CAT
+Литература:
+``` man cat ```
+
+Задача 1. Выводим содержимое файлов 
+``` 
+cat /etc/passwd
+
+cat /etc/shadow
+
+cat /etc/hosts
+
+cat /etc/shells
+ 
+```
+
+Задача 2. Сохранение вывода в файл
+``` 
+cat /etc/passwd > /srv/1
+
+cat /etc/shadow > /srv/2
+
+cat /etc/hosts > /srv/3
+
+cat /etc/shells > /srv/4
+ 
+```
+
+Задача 3. Сохранение вывода нескольких файлов в один файл
+``` 
+
+cat /etc/hosts >> /srv/merge
+
+cat /etc/shells >> /srv/merge
+ 
+```
+
+Задача 4. Самостоятельная работа
+
+Задача 4.1. Вывессти содержимое файла с нумерацией строк
+* /etc/shells
+* /etc/shadow
+* /etc/hosts
+* /etc/services
+
+### CP
+``` man cp ```
+
+Задача 1. Копируем файл 
+``` 
+cp /etc/hosts /srv/
+cp /etc/hosts /srv/hosts_copy
+
+cp /etc/shells /srv/
+cp /etc/shells /srv/shells_copy
+
+``` 
+
+Задача 2. Самостоятельная работа
+
+Задача 2.1. Скопировать следующие файлы в /srv c новым именем
+* /etc/services
+* /etc/shadow
+
+### Touch
+``` man touch ```
+
+Задача 1. Создаем пустой файл
+``` 
+touch file
+touch /srv/file
+touch /srv/{f1,f2,f3}
+
+``` 
+
+Задача 2. Самостоятельная работа
+
+Задача 2.1. Создать файл new_file в следующих каталогах
+* ~/
+* ./
+* /srv
+
+
+### MV
+``` man mv ```
+
+Задача 1. Переименовываем файл 
+``` 
+mv file file_moved
+mv /srv/file /srv/file_moved
+
+``` 
+
+Задача 2. Перемещаем файл
+``` 
+mv /srv/f1 /tmp
+mv /srv/f2 /tmp
+
+``` 
+
+Задача 2. Самостоятельная работа
+
+Задача 2.1. Создать каталог new_dir и переименовать его в old_dir
+
+Задача 2.2. Создать каталог new_dir и переместить его в /srv
+
+
+### RM
+``` man rm ```
+
+Задача 1. Удаляем файл
+``` 
+touch test_file1
+rm test_file1
+touch test_file1
+rm -v test_file1
+
+``` 
+
+Задача 2. Удаляем не пустой каталог
+``` 
+mkdir dir1
+touch dir1/file1
+rmdir dir1
+rm -R dir1
+
+``` 
+
+Задача 2. Самостоятельная работа
+
+Задача 2.1. Создать каталог new_dir c двумя пустыми файлами и и удалить его 
+
+Задача 2.2. Создать пустой файл new_file и удалить его
 
 
 # Первоначальная настройка
