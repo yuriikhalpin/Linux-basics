@@ -91,15 +91,6 @@ TBD
 Задача 2.1. Изучить системную справку следующих утилит
 * pwd
 
-### CAT
-
-### CP
-
-### MV
-
-### RM
-
-
 ## Стандартные утилиты
 
 ### PWD
@@ -327,6 +318,42 @@ rm -R dir1
 
 Задача 2.2. Создать пустой файл new_file и удалить его
 
+### ECHO
+``` man echo ```
+
+Задача 1. Выводим строку на экран
+``` 
+echo "Hello World!"
+echo 'Hello World!'
+echo Hello
+echo
+echo  World
+echo !
+``` 
+
+Задача 2. выводим значние переменных
+``` 
+echo $PWD
+echo $SHELL
+echo $USER
+echo %HOME
+echo $PATH
+VAR="Hello!"
+echo $VAR
+``` 
+Задача 3. Создание файла
+``` 
+echo $PWD > test_file123
+echo $SHELL > test_file123
+echo $USER > test_file123
+echo %HOME > test_file123
+echo $PATH > test_file123
+VAR="Hello!" 
+echo $VAR > test_file123
+``` 
+Задача 4. Самостоятельная работа
+
+Задача 2.1. Создать файл /tmp/HW содержищий строку "dfksfjkvzbvmsjkthryhl"
 
 # Первоначальная настройка
 
