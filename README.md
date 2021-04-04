@@ -96,8 +96,9 @@ ssh user@server.example.com -p 22
 Примеры использования
 
 Обновить список пакетов
-
-``` apt-get update ``` 
+``` 
+apt-get update 
+``` 
 
 Установить в систему последние версии следующих пакетов
 * man
@@ -107,12 +108,16 @@ ssh user@server.example.com -p 22
 * nmap
 * nano
 
-``` apt-get install man vim tree openssh-client nmap nano```
+``` 
+apt-get install man vim tree openssh-client nmap nano
+```
 
 Удалить из системы следующие пакеты
 * nmap
 
-``` apt-get remove nmap```
+```
+apt-get remove nmap
+```
 
 Самостоятельная работа
 
@@ -133,24 +138,36 @@ ssh user@server.example.com -p 22
 Примеры использования
 
 Построить индекс справочных страниц
-``` mandb ```
+```
+mandb 
+ ```
 
 Получить справку о команде
-``` man passwd ```
+```
+man passwd
+```
 
 Получение справки о конфигурационном файле
-``` man 5 passwd ```
+```
+man 5 passwd
+```
 
 Поиск справки по ключевому слову
-``` man -k xfs ```
-``` apropos xfs ```
+```
+man -k xfs
+apropos xfs
+```
 
 Вывод короткой справки
-``` man -f pwd ```
-``` whatis pwd ```
+``` 
+man -f pwd
+whatis pwd 
+```
 
 Вывод справки в формате "документа"
-``` info pwd ```
+```
+info pwd
+```
 
 Самостоятельная работа
 
@@ -164,13 +181,16 @@ ssh user@server.example.com -p 22
 
 ### UPTIME 
 Литература:
-``` man uptime ```
+```
+man uptime
+```
 
 Примеры использования
 
 Вывести время работы сервера после загрузки
-
-``` uptime ```
+```
+uptime
+```
 
 Самостоятельная работа
 
@@ -178,23 +198,28 @@ ssh user@server.example.com -p 22
 
 ### WHICH / WHEREIS / TYPE
 Литература:
-``` man which ```
-``` man whereis ```
-``` man type ```
+```
+man which
+man whereis
+man type
+```
 
 Примеры использования
 
 Определить полный путь к исполняемому файлу(команде)
-
-``` which ls ```
+```
+which ls
+```
 
 Определить полный путь к исполняемому файлу(команде), файлам с исходными кодами и документацией
-
-``` whereis ls ```
+```
+whereis ls
+```
 
 Вывести описание команды
-
-``` type ls ```
+```
+type ls
+```
 
 Самостоятельная работа
 
@@ -207,13 +232,16 @@ ssh user@server.example.com -p 22
 
 ### PWD
 Литература:
-``` man pwd ```
+```
+man pwd
+```
 
 Примеры использования
 
 Определить путь к текущему каталогу
-
-``` pwd ```
+```
+pwd
+```
 
 Самостоятельная работа
 
@@ -221,20 +249,26 @@ ssh user@server.example.com -p 22
 
 ### LS
 Литература:
-``` man ls ```
+```
+man ls
+```
+
 Примеры использования
 
 Вывести содержимое текущего каталога - всё
-
-``` ls -a ```
+```
+ls -a
+```
 
 Вывести содержимое текущего каталога - только каталоги
-
-``` ls -d ```
+```
+ls -d
+```
 
 Вывести содержимое текущего каталога - "длинный" формат(списком)
-
-``` ls -l ```
+```
+ls -l
+```
 
 Самостоятельная работа
 
@@ -250,21 +284,26 @@ ssh user@server.example.com -p 22
 
 ### TREE
 Литература:
-``` man tree ```
+```
+man tree
+```
 
 Примеры использования
 
 Задача 2. Вывести содержимое текущего каталога - всё
-
-``` tree -a```
+```
+tree -a
+```
 
 Задача 3. Вывести содержимое корневого каталога - только каталоги
-
-``` tree -d /```
+```
+tree -d /
+```
 
 Задача 4. Вывести содержимое каталога /var/log - с полным путём
-
-``` tree -f /var/log```
+```
+tree -f /var/log
+```
 
 Самостоятельная работа
 
@@ -276,40 +315,46 @@ ssh user@server.example.com -p 22
 
 ### CD
 Литература:
-``` man cd ```
+```
+man cd
+```
 
 Примеры использования
 
 !!! Для проверки своего местоположения используем команду ``` pwd ``` !!!
 
 Переход в каталог с логами
-
-``` cd /var/log ```
+```
+cd /var/log
+```
 
 Переход в корневой каталог
-
-``` cd / ```
+```
+cd /
+```
 
 Переход в дочерний каталог etc из корневого каталога
-
-``` cd etc ```
+```
+cd etc
+```
 
 Переход в дочерний каталог systemd/system из etc каталога
-
 ``` cd systemd/system ```
 
 Переход в родительский каталог
-
-``` cd .. ```
-
+```
+cd ..
+```
 
 Переход в каталог /etc/ssh используя относительный путь из /etc/systemd
-
-``` cd ../ssh ```
+```
+cd ../ssh
+```
 
 Переход в предыдущий каталог
-
-``` cd - ```
+```
+cd - 
+```
 
 Самостоятельная работа
 
@@ -323,17 +368,22 @@ ssh user@server.example.com -p 22
 
 ### MKDIR
 Литература:
-``` man mkdir ```
+```
+man mkdir
+```
 
 Примеры использования
 
 Создаем один каталог
-``` mkdir /tmp/test1 ```
+```
+mkdir /tmp/test1
+```
 
 Создаем несколько каталога одной командой
-``` mkdir /tmp/test2 /tmp/test3 ```
-
-``` mkdir /tmp/{test4,test5} ```
+```
+mkdir /tmp/test2 /tmp/test3 
+mkdir /tmp/{test4,test5}
+```
 
 Самостоятельная работа
 
@@ -350,18 +400,22 @@ ssh user@server.example.com -p 22
 
 ### RMDIR
 Литература:
-``` man rmdir ```
+```
+man rmdir
+```
 
 Примеры использования
 
 Удаляем один каталог
-
-``` rmdir /tmp/test1 ```
+```
+rmdir /tmp/test1
+```
 
 Удаляем несколько каталога одной командой
-``` rmdir /tmp/test2 /tmp/test3 ```
-
-``` rmdir /tmp/{test4,test5} ```
+```
+rmdir /tmp/test2 /tmp/test3 
+rmdir /tmp/{test4,test5} 
+```
 
 Самостоятельная работа
 
@@ -369,7 +423,9 @@ ssh user@server.example.com -p 22
 
 ### CAT
 Литература:
-``` man cat ```
+```
+man cat
+```
 
 Примеры использования
 
@@ -382,7 +438,6 @@ cat /etc/shadow
 cat /etc/hosts
 
 cat /etc/shells
- 
 ```
 
 Сохранение вывода в файл
@@ -394,16 +449,13 @@ cat /etc/shadow > /srv/2
 cat /etc/hosts > /srv/3
 
 cat /etc/shells > /srv/4
- 
 ```
 
 Сохранение вывода нескольких файлов в один файл
 ``` 
-
 cat /etc/hosts >> /srv/merge
 
 cat /etc/shells >> /srv/merge
- 
 ```
 
 Самостоятельная работа
@@ -416,7 +468,9 @@ cat /etc/shells >> /srv/merge
 
 ### CP
 Литература:
-``` man cp ```
+```
+man cp
+```
 
 Примеры использования
 
@@ -427,7 +481,6 @@ cp /etc/hosts /srv/hosts_copy
 
 cp /etc/shells /srv/
 cp /etc/shells /srv/shells_copy
-
 ``` 
 
 Самостоятельная работа
@@ -438,7 +491,9 @@ cp /etc/shells /srv/shells_copy
 
 ### Touch
 Литература:
-``` man touch ```
+```
+man touch
+```
 
 Примеры использования
 
@@ -447,7 +502,6 @@ cp /etc/shells /srv/shells_copy
 touch file
 touch /srv/file
 touch /srv/{f1,f2,f3}
-
 ``` 
 
 Самостоятельная работа
@@ -459,7 +513,9 @@ touch /srv/{f1,f2,f3}
 
 ### MV
 Литература:
-``` man mv ```
+```
+man mv
+```
 
 Примеры использования
 
@@ -486,7 +542,9 @@ mv /srv/f2 /tmp
 
 ### RM
 Литература:
-``` man rm ```
+```
+man rm
+```
 
 Примеры использования
 
@@ -496,7 +554,6 @@ touch test_file1
 rm test_file1
 touch test_file1
 rm -v test_file1
-
 ``` 
 
 Удаляем не пустой каталог
@@ -505,7 +562,6 @@ mkdir dir1
 touch dir1/file1
 rmdir dir1
 rm -R dir1
-
 ``` 
 
 Самостоятельная работа
@@ -516,7 +572,9 @@ rm -R dir1
 
 ### ECHO
 Литература:
-``` man echo ```
+```
+man echo
+```
 
 Примеры использования
 
