@@ -44,10 +44,29 @@ TBD
 
 # Общие навыки 
 
+## Filesystem Hierarchy Standard, «стандарт иерархии файловой системы»
+Литература: 
+* https://ru.wikipedia.org/wiki/FHS
+* https://zen.yandex.ru/media/merion_networks/obiasnenie-struktury-katalogov-linux-6044b12d9e9a5735c16be613
+Примеры использования
+  
+N/A
+
+Самостоятельная работа
+
+N/A
+
+
 ## Подключение к серверу
 Литература:
 * https://losst.ru/kak-polzovatsya-putty
 * https://zvondozvon.ru/tehnologii/protokoli/dns#_DNS
+
+Примеры использования
+
+N/A
+
+Самостоятельная работа
 
 Задача 1. Подключиться к удаленному серверу с помощью PuTTY(по паролю)
 
@@ -66,28 +85,31 @@ TBD
 * https://losst.ru/kak-polzovatsya-apt
 * https://pingvinus.ru/note/apt
 
-Задача 1. Изучить использование команды APT
+Примеры использования
 
-Задача 1.1. Обновить список пакетов
+Обновить список пакетов
 
 ``` apt-get update ``` 
 
-Задача 1.2. Установить в систему последние версии следующих пакетов
+Установить в систему последние версии следующих пакетов
 * man
 * vim
 * tree
-* mc
 * openssh-client
 * nmap
 * nano
-* htop
 
-``` apt-get install ... ```
+``` apt-get install man vim tree openssh-client nmap nano```
 
 Задача 1.3. Удалить из системы следующие пакеты
 * nmap
 
-``` apt-get remove ... ```
+``` apt-get remove nmap```
+
+Самостоятельная работа
+
+Задача 1.  
+
 
 ## Man
 
