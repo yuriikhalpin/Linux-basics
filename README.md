@@ -133,7 +133,7 @@ apt-get remove nmap
 
 !!! Для выхода нажми q !!!
 
-##№ Man / APROPOS / WHATIS / INFO
+## № Man / APROPOS / WHATIS / INFO
 
 Примеры использования
 
