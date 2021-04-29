@@ -57,6 +57,32 @@ N/A
 
 Задача 1. Изучить FHS
 
+## Типы файлов в Linux
+Литература:
+* https://ravesli.com/tipy-fajlov-v-linux/
+
+Примеры использования
+
+N/A
+
+Самостоятельная работа
+
+Задача 1. Изучить типы файлов в Linux
+
+## Права доступ в Linux
+Литература:
+* https://losst.ru/prava-dostupa-k-fajlam-v-linux
+* https://community.vscale.io/hc/ru/community/posts/211809385-%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%B0%D0%B2%D0%B0%D0%BC%D0%B8-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0-%D0%B2-Linux
+* https://ravesli.com/tipy-polzovatelej-i-prava-dostupa-k-fajlam-katalogam-v-linux/
+
+Примеры использования
+
+N/A
+
+Самостоятельная работа
+
+Задача 1. Изучить права доступа в Linux
+
 ## Подключение к серверу
 Литература:
 * https://losst.ru/kak-polzovatsya-putty
@@ -140,7 +166,7 @@ apt-get remove nmap
 Построить индекс справочных страниц
 ```
 mandb 
- ```
+```
 
 Получить справку о команде
 ```
@@ -269,7 +295,7 @@ lastb
 ```
 
 Вывести информацию о недавно залогиненых пользователях
-``
+```
 lastlog
 ```
 
@@ -720,6 +746,5 @@ echo $VAR > test_file123
 
 ---
 
-## Работа с пользователями
+## Работа с пользователями и группами
 
-TBD
