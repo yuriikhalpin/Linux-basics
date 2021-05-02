@@ -704,4 +704,69 @@ groups bin
 
 ## Работа с правами доступа
 
-TBD
+### CHOWN / CHGRP
+Литература:
+```
+man chown
+man chgrp
+```
+
+#### Примеры использования
+
+Смена пользователя и группы у файла на bin
+```
+touch /root/test_file_own_grp
+ls -l /root/test_file_own_grp
+chown bin /root/test_file_own_grp
+chgrp sys /root/test_file_own_grp
+ls -l /root/test_file_own_grp
+```
+
+#### Самостоятельная работа
+
+Задача 1. Рекурсивная смена владельца каталога со всеми файлами
+  - Создать каталог /tmp/testdir1 c файлами: file1, file2, test3
+  - Сменить владельца каталога и файлов на sys
+
+Задача 2. Рекурсивная смена группы каталога со всеми файлами
+  - Создать каталог /tmp/testdir2 c файлами: file1, file2, test3
+  - Сменить владельца каталога и файлов на bin
+
+### CHMOD
+Литература:
+```
+man chmod
+```
+
+#### Примеры использования
+
+Удаление прав доступа для всех:
+```
+touch /root/test_file_perm
+ls -l /root/test_file_perm
+chmod 0000 /root/test_file_perm
+ls -l /root/test_file_perm
+```
+
+Установить права только на чтение для владельца, группы, всех остальных:
+```
+chmod +0400 /root/test_file_perm
+ls -l /root/test_file_perm
+chmod +0040 /root/test_file_perm
+ls -l /root/test_file_perm
+chmod +0004 /root/test_file_perm
+ls -l /root/test_file_perm
+```
+
+#### Самостоятельная работа
+
+Задача 1. Изучить опции команды chmod
+
+Задача 2. Рекурсивная смена установить права на только запись только для владельца каталога со всеми файлами
+  - Создать каталог /tmp/testdir3 c файлами: file1, file2, test3
+
+Задача 3. Изучить установку прав доступа с помощью буквенного представления команды chmod
+
+Задача 4. Изучить установку Sticky bit, SUID, SGID с помощью команды chmod
+
+---
